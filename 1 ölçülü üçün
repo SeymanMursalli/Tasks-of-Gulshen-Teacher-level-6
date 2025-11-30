@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    int a[100];
+
+    for (int i = 0; i < n; i=i+1)
+        cin >> a[i];
+
+    int c = 0, h = 1;
+    int m = a[0], b = a[0];
+
+    for (int i = 0; i < n; i=i+1) {
+        c=c+a[i];
+        h=h*a[i];
+        if (a[i] > m) m = a[i];
+        if (a[i] < b) b = a[i];
+    }
+
+    cout << "Cəm: " << c << endl;
+    cout << "Hasil: " << h << endl;
+    cout << "Maxsimum: " << m << endl;
+    cout << "Minimum: " << b << endl;
+}
